@@ -1,0 +1,8 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="Example Clean Arc Project Tests" parallel="methods" thread-count="10">
+    <test name="general">
+        <packages>
+            <package name="software.ensemble.ensemble_light_java.tests"/>
+        </packages>
+    </test>
+</suite>

@@ -1,0 +1,13 @@
+{
+  "request": {
+    "method": "GET",
+    "urlPath": "/ui/success_auth"
+  },
+  "response": {
+    "status": 200,
+    "body": "<!DOCTYPE html>\n<html>\n<head></head>\n<body>\n    <div class=\"message\">Access granded!</div>\n</body>\n</html>",
+    "headers": {
+      "Content-Type": "text/html"
+    }
+  }
+}

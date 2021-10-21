@@ -1,0 +1,89 @@
+{
+  "swagger": "2.0",
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "info": {
+    "description": "",
+    "version": "1.0.0",
+    "title": "Test endpoint 2"
+  },
+  "paths": {
+    "/v0/example/finish": {
+      "post": {
+        "tags": [
+          "TEST-ENDPT-01"
+        ],
+        "summary": "Finish some process",
+        "description": "",
+        "operationId": "Finish",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "description": "parameters to finish process",
+            "required": true,
+            "schema": {
+              "type": "object",
+              "required": [
+                "processId"
+              ],
+              "properties": {
+                "processId": {
+                  "type": "integer",
+                  "format": "int32",
+                  "description": "Process ID for finish",
+                  "example": 123
+                },
+                "debugMode": {
+                  "type": "boolean",
+                  "description": "Finish process in debug mode",
+                  "example": true
+                },
+                "someFlag": {
+                  "type": "integer",
+                  "format": "int32",
+                  "description": "Sleep timer, for example",
+                  "example": 66
+                }
+              }
+            }
+          }
+        ],
+        "responses": {
+          "201": {
+            "description": "Process finished successfully"
+          },
+          "400": {
+            "description": "Failed to finished process.",
+            "schema": {
+              "$ref": "#/definitions/ErrorDto"
+            }
+          }
+        }
+      }
+    }
+  },
+  "definitions": {
+    "ErrorDto": {
+      "type": "object",
+      "properties": {
+        "code": {
+          "type": "integer",
+          "format": "int32",
+          "description": "Error code",
+          "example": 331
+        },
+        "message": {
+          "type": "string",
+          "description": "Details about the error",
+          "example": "Failed to check client."
+        }
+      }
+    }
+  }
+}

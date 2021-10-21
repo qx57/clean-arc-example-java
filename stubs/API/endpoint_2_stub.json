@@ -1,0 +1,16 @@
+{
+  "request": {
+    "method": "POST",
+    "url": "/v0/example/finish",
+    "bodyPatterns": [{
+      "equalToJson": "{\n  \"processId\": 111\n}"
+    }]
+  },
+  "response": {
+    "status": 201,
+    "body": "",
+    "headers": {
+      "Content-Type": "application/json"
+    }
+  }
+}

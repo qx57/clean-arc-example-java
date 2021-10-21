@@ -1,0 +1,6 @@
+.idea/
+target/
+*.iml
+test-output/
+.gradle/
+allure-results/

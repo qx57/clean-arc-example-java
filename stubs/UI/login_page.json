@@ -1,0 +1,13 @@
+{
+  "request": {
+    "method": "GET",
+    "url": "/ui/login"
+  },
+  "response": {
+    "status": 200,
+    "body": "<!DOCTYPE html>\n<html>\n<head></head>\n<body>\n    <form action=\"/ui/success_auth\" method=\"GET\">\n        <input type=\"text\" id=\"login_field\" name=\"login\" value=\"\" />\n        <input type=\"password\" name=\"password\" value=\"\" />\n        <input type=\"submit\" id=\"submit\" value=\"Sign in\">\n    </form>\n</body>\n</html>",
+    "headers": {
+      "Content-Type": "text/html"
+    }
+  }
+}

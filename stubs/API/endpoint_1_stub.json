@@ -1,0 +1,13 @@
+{
+  "request": {
+    "method": "GET",
+    "url": "/v0/example/start"
+  },
+  "response": {
+    "status": 200,
+    "body": "{\n  \"processId\": 111,\n  \"message\": \"Process started successfully\"\n}",
+    "headers": {
+      "Content-Type": "application/json"
+    }
+  }
+}

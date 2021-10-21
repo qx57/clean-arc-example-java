@@ -1,0 +1,79 @@
+{
+  "swagger": "2.0",
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "info": {
+    "description": "",
+    "version": "1.0.0",
+    "title": "Test endpoint 1"
+  },
+  "paths": {
+    "/v0/example/start": {
+      "get": {
+        "tags": [
+          "TEST-ENDPT-01"
+        ],
+        "summary": "Start some process",
+        "description": "",
+        "operationId": "Start",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "Process started successfully",
+            "schema": {
+              "$ref": "#/definitions/StartSuccessDto"
+            }
+          },
+          "400": {
+            "description": "Failed to start process.",
+            "schema": {
+              "$ref": "#/definitions/ErrorDto"
+            }
+          }
+        }
+      }
+    }
+  },
+  "definitions": {
+    "StartSuccessDto": {
+      "type": "object",
+      "properties": {
+        "processId": {
+          "type": "integer",
+          "format": "int32",
+          "description": "Started process ID",
+          "example": 123
+        },
+        "message": {
+          "type": "string",
+          "description": "Details about started process",
+          "example": "Process started in debug mode"
+        },
+        "comment": {
+          "type": "string",
+          "description": "Comments to message",
+          "example": "Some comment"
+        }
+      }
+    },
+    "ErrorDto": {
+      "type": "object",
+      "properties": {
+        "code": {
+          "type": "integer",
+          "format": "int32",
+          "description": "Error code",
+          "example": 331
+        },
+        "message": {
+          "type": "string",
+          "description": "Details about the error",
+          "example": "Failed to check client."
+        }
+      }
+    }
+  }
+}
