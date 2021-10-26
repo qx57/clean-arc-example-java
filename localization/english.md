@@ -1,4 +1,4 @@
-# An example of the implementation of a clean architecture in autotests on Kotlin
+# An example of the implementation of a clean architecture in autotests on Java
 
 
 
