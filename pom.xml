@@ -4,9 +4,9 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>software.ensemble</groupId>
-    <artifactId>ensemble-light-java</artifactId>
-    <version>0.1-SNAPSHOT</version>
+    <groupId>net.niiqa.ensemble</groupId>
+    <artifactId>clean-arc-example-java</artifactId>
+    <version>0.1</version>
 
     <properties>
         <env>stage</env>
@@ -66,6 +66,12 @@
             <groupId>org.seleniumhq.selenium</groupId>
             <artifactId>selenium-java</artifactId>
             <version>4.0.0</version>
+        </dependency>
+
+        <dependency>
+            <groupId>io.github.bonigarcia</groupId>
+            <artifactId>webdrivermanager</artifactId>
+            <version>5.0.3</version>
         </dependency>
     </dependencies>
 
